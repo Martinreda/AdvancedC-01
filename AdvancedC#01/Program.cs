@@ -56,9 +56,33 @@
             #endregion
 
             #region Linear Search Example 
-            int[] Numbers = { 5, 8, 9, 1, 3, 4, 6, 2 };
-            int result = Helper<int>.LinearSearch(Numbers, 4);
-            Console.WriteLine( result);
+            //int[] Numbers = { 5, 8, 9, 1, 3, 4, 6, 2 };
+            //int result = Helper<int>.LinearSearch(Numbers, 4);
+            //Console.WriteLine( result);
+            #endregion
+
+            #region Equal & Get HashCode
+            Employee E1 = new Employee(10, "Martin", 1000);
+            Employee E2 = new Employee(20, "Martin", 1000);
+
+            if (E1==E2)
+                Console.WriteLine( "equles");
+            else
+                Console.WriteLine( "Not Equale");
+            //by dufalt Compare With References 
+
+            Console.WriteLine("Not ====================");
+
+            if (E1.Equals(E2)) // compare values with objects
+                Console.WriteLine( "equles");
+            else
+                Console.WriteLine( "Not Equale");
+
+            Console.WriteLine($"E1 : {E1.GetHashCode()}");
+            Console.WriteLine($"E2 : {E2.GetHashCode()}");
+
+            
+
             #endregion
         }
     }
