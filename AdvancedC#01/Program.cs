@@ -1,4 +1,6 @@
-﻿namespace AdvancedC_01
+﻿using System.ComponentModel.Design;
+
+namespace AdvancedC_01
 {
     internal class Program
     {
@@ -61,27 +63,38 @@
             //Console.WriteLine( result);
             #endregion
 
-            #region Equal & Get HashCode
-            Employee E1 = new Employee(10, "Martin", 1000);
-            Employee E2 = new Employee(20, "Martin", 1000);
+            #region Equal & Get HashCode unsafe way
+            //Employee E1 = new Employee(10, "Martin", 1000);
+            //Employee E2 = new Employee(20, "Martin", 1000);
 
-            if (E1==E2)
-                Console.WriteLine( "equles");
-            else
-                Console.WriteLine( "Not Equale");
-            //by dufalt Compare With References 
+            //if (E1==E2)
+            //    Console.WriteLine( "equles");
+            //else
+            //    Console.WriteLine( "Not Equale");
+            ////by dufalt Compare With References 
 
-            Console.WriteLine("Not ====================");
+            //Console.WriteLine("Not ====================");
 
-            if (E1.Equals(E2)) // compare values with objects
-                Console.WriteLine( "equles");
-            else
-                Console.WriteLine( "Not Equale");
+            //if (E1.Equals(E2)) // compare values with objects
+            //    Console.WriteLine( "equles");
+            //else
+            //    Console.WriteLine( "Not Equale");
 
-            Console.WriteLine($"E1 : {E1.GetHashCode()}");
-            Console.WriteLine($"E2 : {E2.GetHashCode()}");
+            //Console.WriteLine($"E1 : {E1.GetHashCode()}");
+            //Console.WriteLine($"E2 : {E2.GetHashCode()}");
 
-            
+
+
+            #endregion
+
+            #region Is & AS Operatoer Safe way
+
+            //1-is operator 
+            //Return True => object is Empolyee
+            //Return False => object is not an employee
+
+            //Emp => pattern matching
+        
 
             #endregion
         }
