@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics.Tracing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -38,12 +39,29 @@ namespace AdvancedC_01
          * T => Template 
          * compiler will outo know the datatype at main
          */
-        public static void swap (ref T x, ref T y)
-        {
-            T temp = x;
-            x = y;
-            y = temp;
+        //public static void swap (ref T x, ref T y)
+        //{
+        //    T temp = x;
+        //    x = y;
+        //    y = temp;
 
+        //}
+        #endregion
+        #region Linear Search Example 
+      
+        public static int LinearSearch(T[] arr , T value)
+        {
+if (arr is not null && arr.Length > 0 && value is not null)
+            {
+                for(int i = 0; i <arr.Length; i++)
+                {
+                    ////== cannot me applied to T class 
+                    //if (arr[i] == value)
+                    if (value.Equals(arr[i]))
+                        return i;
+                }
+            }
+            return -1;
         }
         #endregion
     }

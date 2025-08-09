@@ -40,19 +40,25 @@
             //Console.WriteLine($"c : {c}");
             //Console.WriteLine($"d : {d}");
 
-            Point P1 = new Point(10, 200);
-            Point P2 = new Point(100, 20);
+            //Point P1 = new Point(10, 200);
+            //Point P2 = new Point(100, 20);
 
-            Console.WriteLine( $"{P1}");
-            Console.WriteLine( $"{P2}");
-            Console.WriteLine( "---------------------");
+            //Console.WriteLine( $"{P1}");
+            //Console.WriteLine( $"{P2}");
+            //Console.WriteLine( "---------------------");
 
-            Helper<Point>.swap(ref P1, ref P2);
-            Console.WriteLine($"{P1}");
-            Console.WriteLine($"{P2}");
+            //Helper<Point>.swap(ref P1, ref P2);
+            //Console.WriteLine($"{P1}");
+            //Console.WriteLine($"{P2}");
 
 
 
+            #endregion
+
+            #region Linear Search Example 
+            int[] Numbers = { 5, 8, 9, 1, 3, 4, 6, 2 };
+            int result = Helper<int>.LinearSearch(Numbers, 4);
+            Console.WriteLine( result);
             #endregion
         }
     }
