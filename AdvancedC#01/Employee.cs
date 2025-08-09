@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace AdvancedC_01
 {
-    internal class Employee
+    internal class Employee : IEquatable<Employee>
     {
         public int Id { get; set; }
         public string Name { get; set; }
@@ -73,6 +73,16 @@ namespace AdvancedC_01
         public override int GetHashCode()
         {
             return HashCode.Combine(Id, Name, Salary);
+        }
+
+        public bool Equlas(Employee? emp)
+        {
+            if (emp is not null)
+            {
+                return Id == emp.Id && Name == emp.Name && Salary == emp.Salary;
+            }
+            else
+                return false;
         }
 
         

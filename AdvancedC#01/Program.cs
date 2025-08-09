@@ -94,8 +94,22 @@ namespace AdvancedC_01
             //Return False => object is not an employee
 
             //Emp => pattern matching
-        
 
+
+            #endregion
+
+            #region  IEquatable
+            Employee[] emps =
+            {
+                new Employee (10,"re",4000),
+                new Employee (20,"rw",5000),
+                new Employee (30,"rq",6000),
+                new Employee (40,"rs",7000),
+            };
+
+            Employee E1 = new Employee(30, "rq", 6000);
+            int result = Helper<Employee>.LinearSearch(emps, E1);
+            Console.WriteLine( result);
             #endregion
         }
     }

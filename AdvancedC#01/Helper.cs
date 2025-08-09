@@ -9,7 +9,7 @@ namespace AdvancedC_01
 {
     //genaric class contain all genaric methods 
     // i must declare the data type at the main 
-    public static class Helper<T>
+    public static class Helper<T> where T : IEquatable<T>
     {
         #region Swap EX 
         //public static void swap (ref int x ,ref int y)
