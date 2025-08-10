@@ -9,7 +9,7 @@ namespace AdvancedC_01
 {
     //genaric class contain all genaric methods 
     // i must declare the data type at the main 
-    public static class Helper<T> where T : IEquatable<T>
+    public static class Helper<T> where T :  IEquatable<T> , IComparable
     {
         #region Swap EX 
         //public static void swap (ref int x ,ref int y)
@@ -39,16 +39,16 @@ namespace AdvancedC_01
          * T => Template 
          * compiler will outo know the datatype at main
          */
-        //public static void swap (ref T x, ref T y)
-        //{
-        //    T temp = x;
-        //    x = y;
-        //    y = temp;
+        public static void swap(ref T x, ref T y)
+        {
+            T temp = x;
+            x = y;
+            y = temp;
 
-        //}
+        }
         #endregion
         #region Linear Search Example 
-      
+
         public static int LinearSearch(T[] arr , T value)
         {
 if (arr is not null && arr.Length > 0 && value is not null)
@@ -62,6 +62,21 @@ if (arr is not null && arr.Length > 0 && value is not null)
                 }
             }
             return -1;
+        }
+        #endregion
+
+        #region Bubble sort Genaric EX 
+        public static void BubbleSort(T[] arr)
+        {
+            if (arr is null) return;
+            for (int i = 0; i < arr.Length; i++){
+                for (int j=0; j<arr.Length-1-i; j++)
+                {
+                    if (arr[j].CompareTo(arr[j + 1]) > 0)
+                        Helper<T>.swap(ref arr[j], ref arr[j + 1]);
+                }
+
+            }
         }
         #endregion
     }

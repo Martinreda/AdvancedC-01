@@ -99,6 +99,21 @@ namespace AdvancedC_01
             #endregion
 
             #region  IEquatable
+            //Employee[] emps =
+            //{
+            //    new Employee (10,"re",4000),
+            //    new Employee (20,"rw",5000),
+            //    new Employee (30,"rq",6000),
+            //    new Employee (40,"rs",7000),
+            //};
+
+            //Employee E1 = new Employee(30, "rq", 6000);
+            //int result = Helper<Employee>.LinearSearch(emps, E1);
+            //Console.WriteLine( result);
+            #endregion
+
+            #region Geniric Bubble sort 
+
             Employee[] emps =
             {
                 new Employee (10,"re",4000),
@@ -106,10 +121,21 @@ namespace AdvancedC_01
                 new Employee (30,"rq",6000),
                 new Employee (40,"rs",7000),
             };
+            Helper<Employee>.BubbleSort(emps);
 
-            Employee E1 = new Employee(30, "rq", 6000);
-            int result = Helper<Employee>.LinearSearch(emps, E1);
-            Console.WriteLine( result);
+            foreach (var emp in emps)
+                Console.WriteLine(emp);
+
+            Console.WriteLine("================================");
+
+            int[] Numbers = { 8, 5, 1, 3, 7, 4, 6, 2 };
+
+            Helper<int>.BubbleSort(Numbers);
+
+            foreach (var num in Numbers)
+                Console.WriteLine(num);
+
+
             #endregion
         }
     }
